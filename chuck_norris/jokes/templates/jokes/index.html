@@ -1,0 +1,6 @@
+<h1>Chuck Norris Jokes!</h1>
+{% if joke %}{{ joke }}{% endif %}
+<br /><br />
+Voornaam: <input type="text" name="firstname" id="firstname" {% if first_name %}value="{{ first_name }}"{% endif %} /><br />
+Familienaam: <input type="text" name="lastname" id="lastname" {% if last_name %}value="{{ last_name }}"{% endif %} /><br /><br />
+<input type="submit" value="Get A Joke!"  onclick="location.href = '/jokes/' + encodeURIComponent(document.getElementById('firstname').value) + '/' + encodeURIComponent(document.getElementById('lastname').value)"/>
